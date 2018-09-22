@@ -1,0 +1,22 @@
+<h3>
+    {{leyenda}}, {{progreso}}
+</h3>
+<div class="input-group">
+    <span class="input-group-btn">
+          <button class="btn btn-primary" type="button" (click)="cambiarValor(-5)">
+              <i class="mdi mdi-minus"></i>
+          </button>
+      </span>
+
+    <!-- al cambiar el valor del numero se deberia actualizar la barra de progreso 
+    para esto utilizaremos (ngMOdelChange) que es un evento para escuchar y crearemos una funcion llamada
+onChanges en incrementador.components.ts -->
+
+    <!-- aqui usaremos la referencia del view child con el # -->
+    <input #txtProgress type="number" class="form-control" name="progreso" [(ngModel)]="progreso" (ngModelChange)="onChanges($event)" min="1" max="100">
+    <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" (click)="cambiarValor(+5)">
+          <i class="mdi mdi-plus"></i>
+        </button>
+      </span>
+</div>

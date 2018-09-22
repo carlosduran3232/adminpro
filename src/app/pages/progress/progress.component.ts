@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressComponent implements OnInit {
 
+  //Aqui vamos a programar la barra de progreso, las dos barras 1 y 2
+
+  progreso1: number = 20;
+  progreso2: number = 30;
+
   constructor() { }
 
   ngOnInit() {
   }
-
-}
+  }
